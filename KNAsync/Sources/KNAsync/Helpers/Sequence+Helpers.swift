@@ -13,13 +13,13 @@ private struct IndexedItem<T> {
     let item: T
 }
 
-extension Sequence {
+public extension Sequence {
     func collect() -> [Element] {
         reduce(into: []) { $0.append($1) }
     }
 }
 
-extension Sequence {
+public extension Sequence {
     func mapAsync<T>(task: @escaping (Element) async throws -> T) async rethrows -> [T] {
         try await withThrowingTaskGroup(of: IndexedItem<T>.self, returning: [T].self) { group in
             for (index, item) in enumerated() {

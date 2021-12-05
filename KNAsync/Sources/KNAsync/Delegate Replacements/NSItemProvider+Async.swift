@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension NSItemProvider {
+public extension NSItemProvider {
     func loadObject<T: _ObjectiveCBridgeable>(ofClass cls: T.Type) async throws -> T where T._ObjectiveCType : NSItemProviderReading {
         try await withCheckedThrowingContinuation { continuation in
             _ = loadObject(ofClass: cls) { (result: T?, error: Error?) in
