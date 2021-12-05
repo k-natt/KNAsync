@@ -2,6 +2,11 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+.DS_Store
+/Packages
+/*.xcodeproj
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+
 ## User settings
 xcuserdata/
 
