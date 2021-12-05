@@ -1,2 +1,3 @@
 # KNAsync
-Convenient async helpers and replacements for delegates.
+
+A description of this package.
